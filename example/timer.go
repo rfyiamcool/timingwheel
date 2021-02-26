@@ -1,10 +1,3 @@
-# timingwheel
-
-golang fast timingwheel
-
-## Usage
-
-```go
 package main
 
 import (
@@ -14,7 +7,7 @@ import (
 )
 
 func main() {
-	tw := timingwheel.NewTimingWheel(1*time.Second, 60)
+	tw := timingwheel.New(1*time.Second, 60)
 	tw.Start()
 
 	tw.Sleep(1 * time.Second)
@@ -23,4 +16,3 @@ func main() {
 	case <-tw.After(1 * time.Second):
 	}
 }
-```

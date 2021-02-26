@@ -1,4 +1,4 @@
-package timewheel
+package timingwheel
 
 import (
 	"math/rand"
@@ -15,7 +15,7 @@ var (
 
 func init() {
 	for i := 0; i < count; i++ {
-		tw := NewTimingWheel(1*time.Second, 600) // 10 minite
+		tw := New(1*time.Second, 600) // 10 minite
 		tw.Start()
 		tws = append(tws, tw)
 	}

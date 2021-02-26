@@ -1,4 +1,4 @@
-package timewheel
+package timingwheel
 
 import (
 	"testing"
@@ -12,7 +12,7 @@ func TestAbnormalCase(t *testing.T) {
 		panic("timeout")
 	})
 	var (
-		tw      = NewTimingWheel(1*time.Second, 60)
+		tw      = New(1*time.Second, 60)
 		startAt time.Time
 		notify  <-chan struct{}
 	)

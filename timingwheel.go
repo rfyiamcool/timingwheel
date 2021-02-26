@@ -1,4 +1,4 @@
-package timewheel
+package timingwheel
 
 import (
 	"sync"
@@ -28,7 +28,7 @@ type TimingWheel struct {
 	ring []chan struct{}
 }
 
-func NewTimingWheel(interval time.Duration, buckets int) *TimingWheel {
+func New(interval time.Duration, buckets int) *TimingWheel {
 	tw := new(TimingWheel)
 
 	tw.interval = interval
