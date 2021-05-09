@@ -57,7 +57,7 @@ func (tw *TimingWheel) Stop() {
 }
 
 func (tw *TimingWheel) Sleep(timeout time.Duration) {
-	tw.After(timeout)
+	<-tw.After(timeout)
 }
 
 func (tw *TimingWheel) After(timeout time.Duration) chan struct{} {

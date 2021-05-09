@@ -34,7 +34,7 @@ func SetDefaultTimeingWheels(obj []*TimingWheel) {
 }
 
 func Sleep(timeout time.Duration) {
-	After(timeout)
+	<-After(timeout)
 }
 
 func After(timeout time.Duration) chan struct{} {
